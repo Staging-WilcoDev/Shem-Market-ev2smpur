@@ -1,75 +1,63 @@
-# Go API Starter
+# RiskiStore
 
-A minimal Go development environment with PostgreSQL for building APIs and web applications.
+A modern e-commerce web application built with a robust tech stack. The frontend is developed using React with TypeScript for type safety and better developer experience, powered by Vite for lightning-fast builds. The backend is built with NestJS, a progressive Node.js framework, with PostgreSQL as the database and Apache Kafka for event streaming. The entire application is containerized using Docker for consistent development and deployment environments.
 
-## 🚀 Getting Started
+## Project Structure
 
-This repository provides a clean foundation - perfect for starting any Go backend project!
+```
+riskistore/
+├── frontend/         # React + TypeScript frontend application (Vite)
+├── backend/         # NestJS backend service
+└── docker-compose.yml
+```
 
-### Quick Start
+## Prerequisites
 
-1. **Open in Codespace** or clone locally
-2. **Start developing** 
+- GitHub Codespaces
+- Docker and Docker Compose (pre-installed in Codespace)
 
-   ```bash
-   # The environment provides:
-   # ✅ Go 1.21+ development container
-   # ✅ PostgreSQL database server
-   # ✅ Hot reload with Air
-   # ✅ VS Code optimized setup
+## Getting Started
 
-   # Start your application with hot reload
-   air
-   ```
+The application is configured to run in GitHub Codespaces environment. Once your Codespace is ready:
 
-### What's Included
-
-This starter provides the essentials:
-
-- **Go Development Environment**: Latest Go with development tools
-- **PostgreSQL**: Database server ready for your schema
-- **Hot Reload**: Automatic restart on code changes with Air
-- **VS Code Integration**: Optimized extensions and settings
-
-### Sample Application
-
-The starter includes a minimal HTTP server (`main.go`):
-
-- **GET /** - Simple welcome endpoint
-- **Ready for expansion** - Add your routes, middleware, and logic
-
-### Setting Up Your Database
-
-PostgreSQL is installed and running with a default development setup:
-
-**Default Database Credentials:**
-- **Host**: `localhost`
-- **Port**: `5432`
-- **Database**: `postgres`
-- **User**: `postgres`
-- **Password**: `postgres`
-
+1. Start the application using Docker Compose:
 ```bash
-# Connect to PostgreSQL with default credentials
-psql -h localhost -U postgres -d postgres
-
-### Environment Setup
-
-The default database connection is already configured in `main.go`. For custom setups, create your environment variables:
-
-```bash
-# Example for custom database setup
-export POSTGRES_HOST=localhost
-export POSTGRES_PORT=5432
-export POSTGRES_DB=your_db_name
-export POSTGRES_USER=your_user
-export POSTGRES_PASSWORD=your_password
+docker-compose up
 ```
 
-**Default connection string:**
-```
-host=localhost port=5432 user=postgres password=postgres dbname=postgres sslmode=disable
-```
+This will start:
+- Frontend development server with hot-reload
+- Backend API service
+- PostgreSQL database
+- Kafka and Zookeeper services
 
-**Ready to build?** 
-Start coding your Go application! 🚀
+The frontend will be available at the automatically forwarded port, typically `3000`.
+The backend API will be accessible at `3001`.
+
+## Development
+
+### Frontend
+The frontend application is located in the `frontend/` directory. It's built with:
+- React
+- TypeScript
+- Vite for fast development and optimized builds
+- Hot-reload enabled for quick development iterations
+
+### Backend
+The backend application is located in the `backend/` directory. It features:
+- NestJS framework
+- TypeScript
+- PostgreSQL database
+- Kafka integration for event streaming
+- RESTful API endpoints with built-in OpenAPI (Swagger) documentation
+
+## Docker Configuration
+
+The project includes:
+- `docker-compose.yml` - Main Docker Compose configuration
+- `frontend/Dockerfile.dev` - Frontend development container configuration
+- `backend/Dockerfile.dev` - Backend development container configuration
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.

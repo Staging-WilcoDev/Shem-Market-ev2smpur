@@ -1,58 +1,26 @@
-# Go binaries
-*.exe
-*.dll
-*.so
-*.dylib
-*.test
-*.out
+# Compiled output
+backend/dist/
+*.js
+*.js.map
 
-# Dependencies
-vendor/
-go.work
+# Dependency directories
+backend/node_modules/
+frontend/node_modules/
 
-# Environment
-.env*
+# Environment files
+backend/.env
+backend/.env.local
+frontend/.env
+frontend/.env.local
 
-# IDE
+# Logs
+logs/
+*.log
+
+# IDE-specific files
 .vscode/
 .idea/
 
-# OS
+# OS generated files
 .DS_Store
 Thumbs.db
-
-# Build
-/bin/
-/dist/
-
-# Docker volumes
-docker-volumes/
-# Go binaries
-*.exe
-*.dll
-*.so
-*.dylib
-*.test
-*.out
-
-# Dependencies
-vendor/
-go.work
-
-# Environment
-.env*
-
-# IDE
-.vscode/
-.idea/
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Build
-/bin/
-/dist/
-
-# Docker volumes
-docker-volumes/
