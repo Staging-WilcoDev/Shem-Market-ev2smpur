@@ -1,3 +1,28 @@
+import time
+from contextlib import contextmanager
+
+
+@contextmanager
+def timer():
+    """
+    A context manager that times the execution of a code block.
+    
+    Usage:
+        with timer():
+            # your code here
+            pass
+    
+    Prints the elapsed time in seconds when the context exits.
+    """
+    start_time = time.time()
+    try:
+        yield
+    finally:
+        end_time = time.time()
+        elapsed_time = end_time - start_time
+        print(f"Code block executed in {elapsed_time:.4f} seconds")
+
+
 def all_even(numbers):
     """
     Returns True if all numbers in the list are even, False otherwise.
@@ -38,3 +63,17 @@ if __name__ == "__main__":
     print(f"any_negative([1, -2, 3]): {any_negative([1, -2, 3])}")  # Should be True
     print(f"any_negative([-1, -2, -3]): {any_negative([-1, -2, -3])}")  # Should be True
     print(f"any_negative([]): {any_negative([])}")  # Should be False (empty list)
+    
+    # Test timer context manager
+    print("\nTesting timer context manager:")
+    with timer():
+        # Simulate some work
+        time.sleep(0.1)
+        result = sum(range(1000000))
+        print(f"Sum of first 1,000,000 numbers: {result}")
+    
+    print("\nTesting timer with a quick operation:")
+    with timer():
+        # Quick operation
+        squares = [x**2 for x in range(1000)]
+        print(f"Generated {len(squares)} squares")
