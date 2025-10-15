@@ -11,4 +11,8 @@ This is a Python development environment for **Wilco quests** - an interactive p
 
 Install additional packages as needed: `pip install package_name`
 
+## Known Issues
+
+**Jupyter Notebook with Codespace 1.104**: If you're using Jupyter notebook with Codespace version 1.104, you might need to manually install version 2025.7 of the Jupyter extension. For more details and troubleshooting steps, see: https://github.com/microsoft/vscode-jupyter/issues/16973
+
 Happy coding! 🚀

@@ -13,7 +13,7 @@
         "workbench.welcomePage.experimental.videoTutorials": "off",
         "github.codespaces.defaultExtensions": []
       },
-      "extensions": ["ms-toolsai.jupyter", "ms-python.python"]
+      "extensions": ["ms-toolsai.jupyter@2025.8.0", "ms-python.python"]
     }
   },
   "postStartCommand": "bash -c .devcontainer/setup.sh"
