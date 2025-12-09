@@ -1,4 +1,4 @@
-# Empty starter Python Playground
+# Starter Python Playground
 
 This is a Python development environment for **Wilco quests** - an interactive platform that provides hands-on coding challenges to help developers improve their skills.
 
