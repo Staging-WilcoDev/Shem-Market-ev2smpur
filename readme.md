@@ -1,18 +1,17 @@
-# Empty starter Python Playground
+# Welcome to the Anythink Market repo (powered by [Wilco](https://www.trywilco.com))
 
-This is a Python development environment for **Wilco quests** - an interactive platform that provides hands-on coding challenges to help developers improve their skills.
+To start the app use Docker. It will start both frontend and backend, including all the relevant dependencies, and the db.
 
-## Features
+Please find more info about each part in the relevant Readme file ([frontend](frontend/readme.md) and [backend](backend/README.md)).
 
-- Python runtime
-- Jupyter Notebook support
-- Automatic Wilco quest integration
-- Ready-to-use development environment
+## Development
 
-Install additional packages as needed: `pip install package_name`
+When implementing a new feature or fixing a bug, please create a new pull request against `main` from a feature/bug branch and the Wilco app review it right away
 
-## Known Issues
+## How to run in dev mode?
 
-**Jupyter Notebook with Codespace 1.104**: If you're using Jupyter notebook with Codespace version 1.104, you might need to manually install version 2025.7 of the Jupyter extension. For more details and troubleshooting steps, see: https://github.com/microsoft/vscode-jupyter/issues/16973
+### Using Codespace
+1.  run `docker compose up`
 
-Happy coding! 🚀
+## Tests
+Documentation about running the End to End test can be found under the `/tests` directory
